@@ -1,11 +1,14 @@
 import React, { useState, useEffect } from "react";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+import { FaGithub } from "react-icons/fa";
+import { SiVercel } from "react-icons/si";
 import AboutPage from "./AboutPage";
 import ProjectPage from "./ProjectPage";
 import ContactPage from "./ContactPage";
 import LesLogo from "../../assets/images/Logo-LI2.png";
 import { motion } from "framer-motion";
+import HomePage from "./HomePage";
 
 function GuestPage() {
     const [activeSection, setActiveSection] = useState("about-section");
@@ -29,11 +32,12 @@ function GuestPage() {
     useEffect(() => {
         console.log("scrollProgress:", scrollProgress);
         const progressCircle = document.querySelector(".progress");
-        progressCircle.style.strokeDasharray = `${scrollProgress}, 1335`;
+        progressCircle.style.strokeDasharray = `${scrollProgress}, 2002`;
     }, [scrollProgress]);
 
     useEffect(() => {
         const sectionIds = [
+            "home-section",
             "about-section",
             "project-section",
             "contact-section",
@@ -71,6 +75,7 @@ function GuestPage() {
     }, []);
 
     const sections = [
+        { id: "home-section", label: "HOME", component: <HomePage /> },
         { id: "about-section", label: "ABOUT", component: <AboutPage /> },
         {
             id: "project-section",
@@ -97,27 +102,6 @@ function GuestPage() {
                             <div className="pages-col-12">
                                 <div className="home-header-holder">
                                     <img src={LesLogo} alt="" />
-                                    <motion.svg
-                                        width="60"
-                                        height="60"
-                                        viewBox="0 0 100 100"
-                                        className="progress-wheel"
-                                    >
-                                        <motion.circle
-                                            cx="50"
-                                            cy="50"
-                                            r="30"
-                                            pathLength="1335"
-                                            className="bg"
-                                        />
-                                        <motion.circle
-                                            cx="50"
-                                            cy="50"
-                                            r="30"
-                                            pathLength="1335"
-                                            className="progress"
-                                        />
-                                    </motion.svg>
                                 </div>
                             </div>
                             <div className="pages-col-12">
@@ -174,7 +158,37 @@ function GuestPage() {
                         </div>
                     </div>
                     <div className="pages-col-12">
-                        <div className="home-footer-holder"></div>
+                        <div className="home-footer-holder">
+                            <motion.svg
+                                width="60"
+                                height="60"
+                                viewBox="0 0 100 100"
+                                className="progress-wheel"
+                            >
+                                <motion.circle
+                                    cx="50"
+                                    cy="50"
+                                    r="30"
+                                    pathLength="2002"
+                                    className="bg"
+                                />
+                                <motion.circle
+                                    cx="50"
+                                    cy="50"
+                                    r="30"
+                                    pathLength="2002"
+                                    className="progress"
+                                />
+                            </motion.svg>
+                            <div>
+                                <a href="" title="GitHub">
+                                    <FaGithub />
+                                </a>
+                                <a href="" title="Vercel">
+                                    <SiVercel />
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
