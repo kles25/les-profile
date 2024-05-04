@@ -1,10 +1,28 @@
 import React from "react";
+import PillTab from "../../components/PillTab";
+import Overview from "../../components/about/Overview";
+import TechSkills from "../../components/about/TechSkills";
+import Certificates from "../../components/about/Certificates";
+
+const tabs = [
+    {
+        title: "Overview",
+        component: <Overview />,
+    },
+    {
+        title: "Tech Skills",
+        component: <TechSkills />,
+    },
+    {
+        title: "Certificates",
+        component: <Certificates />,
+    },
+];
 
 function AboutPage() {
     return (
         <div className="section-content-holder">
-            <h1>About</h1>
-            <div className="main-content"></div>
+            <PillTab tabs={tabs} />
         </div>
     );
 }
