@@ -4,6 +4,7 @@ import { Navigate, createBrowserRouter } from "react-router-dom";
 import NotFoundPage from "./pages/AlertPages/NotFoundPage";
 import UnAuthorizedPage from "./pages/AlertPages/UnAuthorizedPage";
 import GuestPage from "./pages/GuestPages/GuestPage";
+import Logo from "./assets/images/Logo-LI2.png";
 
 const TIMEOUT_DURATION = 3000;
 
@@ -19,8 +20,10 @@ const DelayedRoute = ({ element }) => {
     }, []);
 
     return showLoader ? (
-        <div className="default-page-container">
-            <div className="text-loader">Page Loading</div>
+        <div className="loading-screen-container">
+            <div className="text-loader">
+                <img src={Logo} alt="" />
+            </div>
             <div className="loader"></div>
         </div>
     ) : (
