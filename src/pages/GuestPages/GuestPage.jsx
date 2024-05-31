@@ -111,7 +111,7 @@ function GuestPage() {
                             <a href="mailto:i.lesterjohnrodney@gmail.com">
                                 i.lesterjohnrodney@gmail.com
                             </a>
-                            <p>+63 0908 9076587</p>
+                            <p>+63 908 9076587</p>
                         </div>
                         <div
                             className={
