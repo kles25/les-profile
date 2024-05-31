@@ -106,15 +106,25 @@ function GuestPage() {
             <div className="pages-holder">
                 <div className="home-header-holder">
                     <img src={LesLogo} alt="" />
-                    <div
-                        className={
-                            click ? "hb-icon-holder active" : "hb-icon-holder"
-                        }
-                        onClick={handleClick}
-                    >
-                        <div className="hb-icon-one"></div>
-                        <div className="hb-icon-two"></div>
-                        <div className="hb-icon-three"></div>
+                    <div className="righ-header">
+                        <div className="contacts-info">
+                            <a href="mailto:i.lesterjohnrodney@gmail.com">
+                                i.lesterjohnrodney@gmail.com
+                            </a>
+                            <p>+63 0908 9076587</p>
+                        </div>
+                        <div
+                            className={
+                                click
+                                    ? "hb-icon-holder active"
+                                    : "hb-icon-holder"
+                            }
+                            onClick={handleClick}
+                        >
+                            <div className="hb-icon-one"></div>
+                            <div className="hb-icon-two"></div>
+                            <div className="hb-icon-three"></div>
+                        </div>
                     </div>
                 </div>
                 <div className="pages-row">

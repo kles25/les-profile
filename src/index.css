@@ -267,8 +267,29 @@ body {
   padding: 1vh 1vw;
   display: flex;
   align-items: center;
-  justify-content: start;
+  justify-content: space-between;
   position: relative;
+}
+
+.righ-header {
+  display: flex;
+}
+
+.contacts-info {
+  text-align: right;
+}
+
+.contacts-info a {
+  color: #e1e1e1;
+  font-size: 1.7vh;
+  text-decoration: none;
+
+}
+
+.contacts-info p {
+  color: #e1e1e1;
+  font-size: 1.7vh;
+  margin-top: 1vh;
 }
 
 .home-header-holder img {
@@ -490,13 +511,13 @@ body {
 }
 
 .hb-icon-holder {
-  z-index: 20;
   cursor: pointer;
   margin-right: 2vh;
+  margin-left: 2vh;
   padding: 1vh;
   text-align: right;
   display: none;
-  position: fixed;
+  position: relative;
   right: 0;
   background-color: rgba(119, 119, 119, 0.5);
   border-radius: .5vh;
